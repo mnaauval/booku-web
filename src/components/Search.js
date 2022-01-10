@@ -6,6 +6,7 @@ import { Container } from "./pageStyled";
 import Book from "./Book";
 import AddBookmark from "./AddBookmark";
 import RemoveBookmark from "./RemoveBookmark";
+import { allCategory } from "../dbtest/category";
 
 const Search = () => {
   // state
@@ -108,7 +109,7 @@ const Search = () => {
           {isLoadingGetCategory ? (
             <option>Loading...</option>
           ) : (
-            dataGetCategory?.map((item, index) => (
+            allCategory?.map((item, index) => (
               <option key={index} value={item.id}>
                 {item.name}
               </option>
