@@ -109,7 +109,7 @@ const Search = () => {
           {isLoadingGetCategory ? (
             <option>Loading...</option>
           ) : (
-            allCategory?.map((item, index) => (
+            dataGetCategory?.map((item, index) => (
               <option key={index} value={item.id}>
                 {item.name}
               </option>
